@@ -2,21 +2,6 @@
 
 ## Project Setup
 
-### Client
-
-    $ npx create-react-app client --template typescript
-
-    $ cd client
-    $ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
-
-    $ npm install axios
-
-    $ npm install --save bootstrap
-    $ vim ./src/index.tsx
-    // import "bootstrap/dist/css/bootstrap.css";
-
-    $ npm start
-
 ### Posts
 
     $ mkdir posts
@@ -46,3 +31,19 @@
     $ npm install --save-dev @types/express
 
     $ npm run dev
+
+### Client
+
+    $ npx create-react-app client --template typescript
+
+    $ cd client
+    $ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+    $ npm install axios
+
+    $ npm install --save bootstrap
+    $ vim ./src/index.tsx
+    // import "bootstrap/dist/css/bootstrap.css";
+
+    $ npm start
+
