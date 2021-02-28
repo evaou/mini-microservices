@@ -3,10 +3,9 @@ import * as bodyParser from "body-parser";
 import { randomBytes } from "crypto";
 
 const app = express();
-const posts: { [key: string]: {} } = {};
-
-app.set("case sensitive routing", true);
 app.use(bodyParser.json());
+
+const posts: { [key: string]: {} } = {};
 
 app.get("/posts", (req, res) => {
   res.send(posts);
