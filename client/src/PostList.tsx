@@ -15,7 +15,7 @@ const PostList = () => {
   }, []);
 
   const renderedPosts = Object.values(posts).map((post) => {
-    let typedPost = post as { [key: string]: string };
+    const typedPost = post as { [key: string]: string };
 
     return (
       <div
