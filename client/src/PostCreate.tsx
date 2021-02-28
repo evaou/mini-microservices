@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { FormEvent, useState } from "react";
 import axios from "axios";
 

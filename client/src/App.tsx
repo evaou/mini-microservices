@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import PostCreate from "./PostCreate";
 
 export default () => {
