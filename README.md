@@ -11,6 +11,10 @@
 
     $ npm install axios
 
+    $ npm install --save bootstrap
+    $ vim ./src/index.tsx
+    // import "bootstrap/dist/css/bootstrap.css";
+
     $ npm start
 
 ### Posts
