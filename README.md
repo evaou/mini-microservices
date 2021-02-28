@@ -13,6 +13,14 @@
     $ npm init -y
     $ npm install express cors axios nodemon
 
+    $ npm install typescript ts-node
+    $ tsc --init
+    $ vim tsconfig.json
+
+    $ npm install --save-dev @types/express
+
+    $ npm run dev
+
 ### Comments
 
     $ mkdir comments
