@@ -13,7 +13,7 @@
     $ tsc --init
     $ vim tsconfig.json
 
-    $ npm install --save-dev @types/express
+    $ npm install --save-dev @types/express @types/cors
 
     $ npm run dev
 
@@ -28,7 +28,7 @@
     $ tsc --init
     $ vim tsconfig.json
 
-    $ npm install --save-dev @types/express
+    $ npm install --save-dev @types/express @types/cors
 
     $ npm run dev
 
