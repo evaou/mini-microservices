@@ -11,7 +11,7 @@
     $ mkdir posts
     $ cd posts
     $ npm init -y
-    $ npm install express cors axios nodemon
+    $ npm install express cors axios nodemon body-parser
 
     $ npm install typescript ts-node
     $ tsc --init
@@ -26,4 +26,12 @@
     $ mkdir comments
     $ cd comments
     $ npm init -y
-    $ npm install express cors axios nodemon
+    $ npm install express cors axios nodemon body-parser
+
+    $ npm install typescript ts-node
+    $ tsc --init
+    $ vim tsconfig.json
+
+    $ npm install --save-dev @types/express
+
+    $ npm run dev
