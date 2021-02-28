@@ -4,7 +4,14 @@
 
 ### Client
 
-    $ npx create-react-app client
+    $ npx create-react-app client --template typescript
+
+    $ cd client
+    $ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+    $ npm install axios
+
+    $ npm start
 
 ### Posts
 
