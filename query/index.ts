@@ -23,7 +23,7 @@ app.post("/events", (req, res) => {
   }
 
   if (type === "CommentCreated") {
-    const { id, content, postId } = data;
+    const { id, content, postId, status } = data;
 
     interface PostItem {
       id: string;
@@ -33,7 +33,7 @@ app.post("/events", (req, res) => {
 
     const post = posts[postId] as PostItem;
 
-    post.comments.push({ id, content });
+    post.comments.push({ id, content, status });
   }
 
   res.send({});
