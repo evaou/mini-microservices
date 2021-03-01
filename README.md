@@ -47,3 +47,16 @@
 
     $ npm start
 
+### Event Bus
+
+    $ cd event-bus
+    $ npm init -y
+    $ npm install express nodemon axios
+
+    $ npm install typescript ts-node
+    $ tsc --init
+    $ vim tsconfig.json
+
+    $ npm install --save-dev @types/express
+
+    $ npm run dev
