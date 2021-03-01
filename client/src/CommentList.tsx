@@ -3,11 +3,28 @@ const CommentList = ({ comments }: any) => {
     interface CommentItem {
       id: string;
       content: string;
+      status: string;
     }
 
     const typedComment = comment as CommentItem;
 
-    return <li key={typedComment.id}>{typedComment.content}</li>;
+    let content;
+
+    switch (typedComment.status) {
+      case "approved":
+        content = typedComment.content;
+        break;
+      case "pending":
+        content = "This comment is awaiting moderation.";
+        break;
+      case "rejected":
+        content = "This comment has been rejected.";
+        break;
+      default:
+        break;
+    }
+
+    return <li key={typedComment.id}>{content}</li>;
   });
 
   return <ul>{renderedComments}</ul>;
