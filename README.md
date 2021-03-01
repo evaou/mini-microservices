@@ -49,6 +49,7 @@
 
 ### Event Bus
 
+    $ mkdir event-bus
     $ cd event-bus
     $ npm init -y
     $ npm install express nodemon axios
@@ -58,5 +59,20 @@
     $ vim tsconfig.json
 
     $ npm install --save-dev @types/express
+
+    $ npm run dev
+
+### Query
+
+    $ mkdir query
+    $ cd query
+    $ npm init -y
+    $ npm install express cors nodemon
+
+    $ npm install typescript ts-node
+    $ tsc --init
+    $ vim tsconfig.json
+
+    $ npm install --save-dev @types/express @types/cors
 
     $ npm run dev
