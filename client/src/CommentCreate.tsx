@@ -17,7 +17,7 @@ const CommentCreate = ({ postId }: { [key: string]: string }) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div className="form-gropu">
+        <div className="form-group">
           <label>New Comment</label>
           <input
             value={content}
