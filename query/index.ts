@@ -1,12 +1,7 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
-
-const app = express();
-app.use(bodyParser.json());
-app.use(cors());
-
-const posts: { [key: string]: {} } = {};
+import axios from "axios";
 
 interface PostItem {
   id: string;
@@ -14,15 +9,13 @@ interface PostItem {
   comments: {}[];
 }
 
-app.get("/posts", (req, res) => {
-  res.send(posts);
-});
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
 
-app.post("/events", (req, res) => {
-  console.log("Received Event", req.body.type);
+const posts: { [key: string]: {} } = {};
 
-  const { type, data } = req.body;
-
+const handleEvent = (type: string, data: { [key: string]: string }) => {
   if (type === "PostCreated") {
     const { id, title } = data;
     posts[id] = { id, title, comments: [] };
@@ -51,10 +44,27 @@ app.post("/events", (req, res) => {
       comment.content = content;
     }
   }
+};
+
+app.get("/posts", (req, res) => {
+  res.send(posts);
+});
+
+app.post("/events", (req, res) => {
+  const { type, data } = req.body;
+
+  handleEvent(type, data);
 
   res.send({});
 });
 
-app.listen(4002, () => {
+app.listen(4002, async () => {
   console.log("Query servie is listening on 4002");
+
+  const res = await axios.get("http://localhost:4005/events");
+
+  for (let event of res.data) {
+    console.log("Processing event: ", event.type);
+    handleEvent(event.type, event.data);
+  }
 });
