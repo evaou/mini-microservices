@@ -67,7 +67,7 @@
     $ mkdir query
     $ cd query
     $ npm init -y
-    $ npm install express cors nodemon
+    $ npm install express cors nodemon axios
 
     $ npm install typescript ts-node
     $ tsc --init
