@@ -76,3 +76,18 @@
     $ npm install --save-dev @types/express @types/cors
 
     $ npm run dev
+
+## Moderation
+
+    $ mkdir moderation
+    $ cd moderation
+    $ npm init -y
+    $ npm install axios express nodemon
+
+    $ npm install typescript ts-node
+    $ tsc --init
+    $ vim tsconfig.json
+
+    $ npm install --save-dev @types/express
+
+    $ npm run dev
