@@ -8,7 +8,7 @@ app.use(cors());
 
 const posts: { [key: string]: {} } = {};
 
-app.get("/events", (req, res) => {
+app.get("/posts", (req, res) => {
   res.send(posts);
 });
 
