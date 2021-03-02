@@ -15,7 +15,7 @@
 
     $ npm install --save-dev @types/express @types/cors
 
-    $ npm run dev
+    $ npm start
 
 ### Comments
 
@@ -30,7 +30,7 @@
 
     $ npm install --save-dev @types/express @types/cors
 
-    $ npm run dev
+    $ npm start
 
 ### Client
 
@@ -60,7 +60,7 @@
 
     $ npm install --save-dev @types/express
 
-    $ npm run dev
+    $ npm start
 
 ### Query
 
@@ -75,7 +75,7 @@
 
     $ npm install --save-dev @types/express @types/cors
 
-    $ npm run dev
+    $ npm start
 
 ## Moderation
 
@@ -90,4 +90,4 @@
 
     $ npm install --save-dev @types/express
 
-    $ npm run dev
+    $ npm start
