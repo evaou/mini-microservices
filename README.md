@@ -91,3 +91,18 @@
     $ npm install --save-dev @types/express
 
     $ npm start
+
+## Docker Setup
+
+### Service
+
+    $ cd <service-name>
+    $ docker build -t mini/<service-name> .
+    $ docker run mini/<service-name>
+
+### General
+
+    $ docker run -it <docker-image-tag> sh
+    $ docker ps
+    $ docker exec -it <docker-container-id>
+    $ docker logs <docker-container-id>
