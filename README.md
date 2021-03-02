@@ -2,33 +2,27 @@
 
 ## Project Setup
 
-### Posts
+### Posts/Comments/Query
 
-    $ mkdir posts
-    $ cd posts
+    $ mkdir <service-name>
+    $ cd <service-name>
     $ npm init -y
-    $ npm install express cors axios nodemon body-parser
-
-    $ npm install typescript ts-node
-    $ tsc --init
-    $ vim tsconfig.json
-
+    $ npm install express cors axios nodemon typescript ts-node
     $ npm install --save-dev @types/express @types/cors
+
+    $ vim tsconfig.json
 
     $ npm start
 
-### Comments
+### Moderation/Event Bus
 
-    $ mkdir comments
-    $ cd comments
+    $ mkdir <service-name>
+    $ cd <service-name>
     $ npm init -y
-    $ npm install express cors axios nodemon body-parser
+    $ npm install express nodemon axios typescript ts-node
+    $ npm install --save-dev @types/express
 
-    $ npm install typescript ts-node
-    $ tsc --init
     $ vim tsconfig.json
-
-    $ npm install --save-dev @types/express @types/cors
 
     $ npm start
 
@@ -44,51 +38,6 @@
     $ npm install --save bootstrap
     $ vim ./src/index.tsx
     // import "bootstrap/dist/css/bootstrap.css";
-
-    $ npm start
-
-### Event Bus
-
-    $ mkdir event-bus
-    $ cd event-bus
-    $ npm init -y
-    $ npm install express nodemon axios
-
-    $ npm install typescript ts-node
-    $ tsc --init
-    $ vim tsconfig.json
-
-    $ npm install --save-dev @types/express
-
-    $ npm start
-
-### Query
-
-    $ mkdir query
-    $ cd query
-    $ npm init -y
-    $ npm install express cors nodemon axios
-
-    $ npm install typescript ts-node
-    $ tsc --init
-    $ vim tsconfig.json
-
-    $ npm install --save-dev @types/express @types/cors
-
-    $ npm start
-
-## Moderation
-
-    $ mkdir moderation
-    $ cd moderation
-    $ npm init -y
-    $ npm install axios express nodemon
-
-    $ npm install typescript ts-node
-    $ tsc --init
-    $ vim tsconfig.json
-
-    $ npm install --save-dev @types/express
 
     $ npm start
 
