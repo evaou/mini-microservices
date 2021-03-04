@@ -61,9 +61,11 @@ app.post("/events", (req, res) => {
 app.listen(4002, async () => {
   console.log("Query servie is listening on 4002");
 
-  const res = await axios.get("http://localhost:4005/events").catch((err) => {
-    console.log(err.message);
-  });
+  const res = await axios
+    .get("http://event-bus-srv:4005/events")
+    .catch((err) => {
+      console.log(err.message);
+    });
 
   if (res) {
     for (let event of res.data) {
