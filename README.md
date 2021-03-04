@@ -47,6 +47,7 @@
 
     $ cd <service-name>
     $ docker build -t <dockerhub-name>/<service-name> .
+    $ docker push <dockerhub-name>/<service-name>
     $ docker run <dockerhub-name>/<service-name>
 
 ### General
