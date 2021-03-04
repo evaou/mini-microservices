@@ -46,8 +46,8 @@
 ### Service
 
     $ cd <service-name>
-    $ docker build -t mini/<service-name> .
-    $ docker run mini/<service-name>
+    $ docker build -t <dockerhub-name>/<service-name> .
+    $ docker run <dockerhub-name>/<service-name>
 
 ### General
 
@@ -55,3 +55,36 @@
     $ docker ps
     $ docker exec -it <docker-container-id>
     $ docker logs <docker-container-id>
+
+## Kubernetes
+
+### Service
+
+    $ cd posts
+    $ docker build -t <dockerhub-name>/posts .
+
+    $ cd infra/k8s
+    $ vim posts-depl.yaml
+    $ kubectl apply -f posts.yaml
+    $ kubectl get pods
+
+    $ export DEBUG= // disable network log
+    $ kubectl exec -it posts -- sh
+
+### General
+
+    // kind: pod, deployment, service
+    $ kubectl get <kind>s
+    $ kubectl exect -it <name> -- <command>
+    $ kubectl logs <name>
+    $ kubectl delete <kind> <name>
+    $ kubectl apply -f <config-file-name>
+    $ kubectl describe <kind> <name>
+
+    $ kubectl rollout restart deployment <name>
+
+### Type of Kubernetes Services
+- cluster ip: expose a pod url to same-cluster pods
+- node port: expose pods to outside world for dev
+- load balancer: expose pods to outside world
+- external name: redirect an in-cluster request to a CNAME url
