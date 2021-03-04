@@ -80,12 +80,19 @@
     $ kubectl logs <name>
     $ kubectl delete <kind> <name>
     $ kubectl apply -f <config-file-name>
+    $ kubectl apply -f .
     $ kubectl describe <kind> <name>
 
     $ kubectl rollout restart deployment <name>
 
 ### Type of Kubernetes Services
+
 - cluster ip: expose a pod url to same-cluster pods
-- node port: expose pods to outside world for dev
-- load balancer: expose pods to outside world
+- node port: expose a pod to outside world for dev
+
+  - `$ kubectl get services`
+  - posts-srv NodePort 10.105.139.132 \<none\> 4000:**32302**/TCP
+  - http://localhost:32302/posts
+
+- load balancer: expose a pod to outside world
 - external name: redirect an in-cluster request to a CNAME url
