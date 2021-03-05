@@ -110,3 +110,14 @@
       - algin with host in ingress-srv.yaml
 
 - external name: redirect an in-cluster request to a CNAME url
+
+### Skaffold
+
+    $ brew install skaffold
+    $ brew upgrade skaffold
+
+    $ vim skaffold.yaml
+    $ skaffold dev
+
+- automate tasks in dev environment
+- update code in a running pod
