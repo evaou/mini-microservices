@@ -107,5 +107,6 @@
 
     - `$ vim /etc/hosts`
       - 127.0.0.1 posts.com
+      - algin with host in ingress-srv.yaml
 
 - external name: redirect an in-cluster request to a CNAME url
