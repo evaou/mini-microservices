@@ -95,4 +95,17 @@
   - http://localhost:32302/posts
 
 - load balancer: expose a pod to outside world
+
+  - tell cluster to reach cloud provider and provision cloud load balancer
+  - outside world > cloud load balancer > ingress controller
+
+- ingress controller: a cluster pod with a set of routing rules to direct traffic to cluster-ip services of pods
+
+  - ingress-nginx: project to create a load balancer service + an ingress
+
+    - `$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml`
+
+    - `$ vim /etc/hosts`
+      - 127.0.0.1 posts.com
+
 - external name: redirect an in-cluster request to a CNAME url
