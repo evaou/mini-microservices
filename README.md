@@ -79,11 +79,11 @@
     $ kubectl exect -it <name> -- <command>
     $ kubectl logs <name>
     $ kubectl delete <kind> <name>
-    $ kubectl apply -f <config-file-name>
-    $ kubectl apply -f .
     $ kubectl describe <kind> <name>
 
     $ kubectl rollout restart deployment <name>
+    $ kubectl apply -f <config-file-name>
+    $ kubectl apply -f .
 
 ### Type of Kubernetes Services
 
